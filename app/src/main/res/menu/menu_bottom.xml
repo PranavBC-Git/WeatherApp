@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_svgrepo_com"/>
+
+    <item
+        android:id="@+id/Forecast"
+        android:title="ForeCast"
+        android:icon="@drawable/explore_svgrepo_com"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings_svgrepo_com"/>
+
+</menu>

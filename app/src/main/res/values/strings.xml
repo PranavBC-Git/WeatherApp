@@ -1,0 +1,8 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Des Sunshine</string>
+    <string name="temperature_in_celcius">%s °C</string>
+    <string name="wind">WIND\n%s km/h</string>
+    <string name="pressure">PRESSURE\n%s MB</string>
+    <string name="humidity">HUMIDITY\n%s </string>
+
+</resources>

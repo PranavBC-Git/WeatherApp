@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Forecast">
+
+    <fragment
+        android:id="@+id/Forecast"
+        android:label="Forecast"
+        tools:layout="@layout/forecast" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/Home" />
+    </fragment>
+    <fragment
+        android:id="@+id/Home"
+        android:label="Home"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/Settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/Settings"
+        android:label="Settings"
+        tools:layout="@layout/settings">
+    </fragment>
+</navigation>
