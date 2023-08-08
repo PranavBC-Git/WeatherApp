@@ -29,8 +29,8 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setWindowFlag(requireActivity(),WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
-        requireActivity().window.statusBarColor = Color.TRANSPARENT
+        requireActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
     }
 
     override fun onCreateView(
@@ -43,6 +43,9 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        val city= requireActivity().getSharedPreferences("weatherapp",0)
+            .getString("city_name","Bangalore")
+        mainViewModel.getWeatherData(city!!)
         mainViewModel.weatherData.observe(viewLifecycleOwner){
             binding.tvTemperature.text = getString(R.string.temperature_in_celcius, it.current?.tempC?.roundToInt().toString())
             binding.tvWind.text = getString(R.string.wind,it.current?.windKph.toString())

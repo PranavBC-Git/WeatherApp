@@ -1,16 +1,19 @@
 package com.example.weatherapp.ui
 
-import androidx.lifecycle.ViewModelProvider
+import android.R
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
-import com.example.weatherapp.R
 import com.example.weatherapp.databinding.FragmentSettingsBinding
 import com.example.weatherapp.viewmodel.SettingsViewModel
+
 
 class SettingsFragment : Fragment() {
 
@@ -19,6 +22,7 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
@@ -32,11 +36,11 @@ class SettingsFragment : Fragment() {
                 Toast.makeText(requireActivity(),"Please Enter a City!",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
                 }
-
             requireActivity()
                 .getSharedPreferences("weatherapp",0).edit()
                 .putString("city_name", cityName.toString())
                 .apply()
+
         }
     }
 

@@ -48,9 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-      val city= getSharedPreferences("weatherapp",0)
-            .getString("city_name","Bangalore")
-        viewModel.getWeatherData(city!!)
+
     }
 
 }
