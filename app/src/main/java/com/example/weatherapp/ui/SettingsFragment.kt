@@ -31,13 +31,17 @@ class SettingsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         binding.btCity.setOnClickListener {
-            val cityName =binding.etCity.text
-            if(cityName.isNullOrEmpty()){
-                Toast.makeText(requireActivity(),"Please Enter a City!",Toast.LENGTH_SHORT).show()
+            val cityName = binding.etCity.text
+            if (cityName.isNullOrEmpty()) {
+                Toast.makeText(
+                    requireActivity(),
+                    "Please Enter a City!",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
-                }
+            }
             requireActivity()
-                .getSharedPreferences("weatherapp",0).edit()
+                .getSharedPreferences("weatherapp", 0).edit()
                 .putString("city_name", cityName.toString())
                 .apply()
 

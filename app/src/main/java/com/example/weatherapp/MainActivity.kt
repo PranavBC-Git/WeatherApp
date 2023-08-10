@@ -1,18 +1,15 @@
 package com.example.weatherapp
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.WindowManager
-
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.example.weatherapp.ui.HomeFragment
 import com.example.weatherapp.ui.SettingsFragment
-import com.example.weatherapp.ui.ThirdFragment
-import com.example.weatherapp.utils.setWindowFlag
+import com.example.weatherapp.ui.ForecastFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,14 +25,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+// Hide the system bars.
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
-        window.statusBarColor = Color.TRANSPARENT
-
         val firstFragment = HomeFragment()
-        val  thirdFragment= SettingsFragment()
-        val secondFragment = ThirdFragment()
+        val thirdFragment = SettingsFragment()
+        val secondFragment = ForecastFragment()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         val listOfFragment = listOf(firstFragment, secondFragment, thirdFragment)
 

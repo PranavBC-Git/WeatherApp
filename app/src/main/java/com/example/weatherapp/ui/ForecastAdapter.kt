@@ -13,8 +13,6 @@ import kotlin.math.roundToInt
 class ForecastAdapter : RecyclerView.Adapter<ForecastAdapter.ViewHolder>() {
 
     private val mForecastList = mutableListOf<Forecast.Forecastday.Hour>()
-    val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)
-
 
     fun updateForecastData(data: List<Forecast.Forecastday.Hour>) {
         mForecastList.clear()

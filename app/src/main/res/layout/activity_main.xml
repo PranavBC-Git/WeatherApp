@@ -17,7 +17,7 @@
         <me.ibrahimsn.lib.SmoothBottomBar
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             app:backgroundColor="@color/secondary_text"
             app:textSize="14sp"
             app:iconSize="24dp"
@@ -31,7 +31,8 @@
             app:cornerRadius="16dp"
             app:menu="@menu/menu_bottom"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:fitsSystemWindows="true"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

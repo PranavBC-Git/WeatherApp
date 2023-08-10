@@ -52,7 +52,7 @@ class MainViewModel: ViewModel() {
         try {
             viewModelScope.launch(Dispatchers.IO){
                 _weatherData.postValue(apiService.getForecastData(city=city))
-                Log.d("msg1",apiService.getForecastData().toString())
+                Log.d("for",apiService.getForecastData(city=city).toString())
             }
         }catch (e: Exception){
             Log.d("msg1",e.toString())
