@@ -20,6 +20,25 @@
         android:scaleType="fitXY"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:layout_editor_absoluteX="8dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_forecastdays"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/recycle_background"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitXY"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="8dp" />
+
+
 
 
 </FrameLayout>

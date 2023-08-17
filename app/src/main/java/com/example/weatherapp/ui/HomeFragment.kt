@@ -3,6 +3,7 @@ package com.example.weatherapp.ui
 import android.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -44,11 +45,12 @@ class HomeFragment : Fragment() {
         super.onResume()
         val city= requireActivity().getSharedPreferences("weatherapp",0)
             .getString("city_name","Bangalore")
-        mainViewModel.getWeatherData(city!!)
+        Log.d("TAG", city.toString())
+        mainViewModel.getWeatherData(city!!, days=7)
         mainViewModel.weatherData.observe(viewLifecycleOwner){
             binding.tvTemperature.text = getString(R.string.temperature_in_celcius, it.current?.tempC?.roundToInt().toString())
             binding.tvWind.text = getString(R.string.wind,it.current?.windKph.toString())
-            binding.tvPressure.text = getString(R.string.pressure,it.current?.pressureIn.toString())
+            binding.tvPressure.text = getString(R.string.pressure,it.current?.pressureMb.toString())
             binding.tvHumidity.text = getString(R.string.humidity,it.current?.humidity.toString())
             binding.rvForecast.apply {
                 adapter = forecastAdapter

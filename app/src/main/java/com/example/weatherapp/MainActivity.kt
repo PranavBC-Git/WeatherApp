@@ -1,6 +1,7 @@
 package com.example.weatherapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-// Hide the system bars.
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val firstFragment = HomeFragment()
         val thirdFragment = SettingsFragment()
@@ -36,11 +37,14 @@ class MainActivity : AppCompatActivity() {
 
         val listOfFragment = listOf(firstFragment, secondFragment, thirdFragment)
 
+
         setCurrentFragment(firstFragment)
 
         binding.bottomBar.onItemSelected = {
             setCurrentFragment(listOfFragment[it])
         }
+
+
     }
 
     override fun onResume() {

@@ -28,6 +28,7 @@ class ForecastFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ThirdViewModel::class.java)
         // TODO: Use the ViewModel
+
     }
 
 }
