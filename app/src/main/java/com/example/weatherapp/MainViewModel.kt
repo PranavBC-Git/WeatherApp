@@ -30,8 +30,8 @@ class MainViewModel: ViewModel() {
     private fun createApiService() {
 
         val interceptor = HttpLoggingInterceptor()
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-       val client =  OkHttpClient.Builder()
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+        val client =  OkHttpClient.Builder()
             .addInterceptor(interceptor)
             .build()
 

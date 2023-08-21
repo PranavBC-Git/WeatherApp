@@ -1,8 +1,8 @@
 package com.example.weatherapp.utils
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 
-fun setWindowFlag(activity: Activity, bits: Int, on: Boolean) {
+fun setWindowFlag(activity: AppCompatActivity, bits: Int, on: Boolean) {
     val win = activity.window
     val winParams = win.attributes
     if (on) {

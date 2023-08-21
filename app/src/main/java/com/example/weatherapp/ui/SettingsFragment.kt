@@ -1,6 +1,8 @@
 package com.example.weatherapp.ui
 
 import android.R
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils.replace
 import android.view.LayoutInflater
@@ -11,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import com.example.weatherapp.MainActivity
 import com.example.weatherapp.databinding.FragmentSettingsBinding
 import com.example.weatherapp.viewmodel.SettingsViewModel
 
@@ -44,7 +47,9 @@ class SettingsFragment : Fragment() {
                 .getSharedPreferences("weatherapp", 0).edit()
                 .putString("city_name", cityName.toString())
                 .apply()
-
+            val i= Intent(activity,MainActivity::class.java)
+            startActivity(i)
+            (activity as Activity?)!!.overridePendingTransition(0,0)
         }
     }
 

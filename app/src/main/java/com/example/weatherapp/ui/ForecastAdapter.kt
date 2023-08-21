@@ -29,7 +29,7 @@ class ForecastAdapter : RecyclerView.Adapter<ForecastAdapter.ViewHolder>() {
                 .override(200, 200)
                 .centerCrop()
                 .into(binding.ivCondition)
-            binding.tvLine3.text = item?.tempC?.roundToInt().toString()+"°"
+            binding.tvLine3.text = item?.tempC?.roundToInt().toString()+"°C"
         }
     }
 

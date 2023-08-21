@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/background" />
+                    app:srcCompat="@drawable/ic_winter" />
 
         </androidx.cardview.widget.CardView>
 
@@ -63,7 +63,7 @@
                         android:id="@+id/iv_wind"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/wind_icon"
+                        app:srcCompat="@drawable/wind_icon"
                         app:tint="@color/white"
 
                         />
@@ -102,7 +102,7 @@
                         android:layout_height="32dp"
                         android:paddingTop="8dp"
                         android:paddingLeft="8dp"
-                        android:src="@drawable/thermometer_svgrepo_com"
+                        app:srcCompat="@drawable/thermometer_svgrepo_com"
                         app:tint="@color/white" />
 
                     <TextView
@@ -134,7 +134,7 @@
                         android:id="@+id/iv_humidity"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/water_drop_4"
+                        app:srcCompat="@drawable/water_drop_4"
                         app:tint="@color/white"
                         android:paddingTop="8dp"
                         android:paddingLeft="8dp"/>
