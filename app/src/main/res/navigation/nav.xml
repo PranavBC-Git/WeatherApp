@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/Forecast">
+    app:startDestination="@id/Home">
 
     <fragment
-        android:id="@+id/Forecast"
+        android:id="@+id/Home"
         android:label="Forecast"
-        tools:layout="@layout/forecast" >
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/Home" />
+            app:destination="@id/Forecast" />
     </fragment>
     <fragment
-        android:id="@+id/Home"
+        android:id="@+id/Forecast"
         android:label="Home"
-        tools:layout="@layout/activity_main" >
+        tools:layout="@layout/fragment_third" >
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/Settings" />
@@ -24,6 +24,6 @@
     <fragment
         android:id="@+id/Settings"
         android:label="Settings"
-        tools:layout="@layout/settings">
+        tools:layout="@layout/fragment_settings">
     </fragment>
 </navigation>

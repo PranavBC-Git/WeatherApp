@@ -46,18 +46,17 @@ class MainViewModel: ViewModel() {
     }
 
 
-    fun getWeatherData(city:String): String{
+    fun getWeatherData(city:String,days:Int): String{
 
-        //return "Pranav 123"
+
         try {
             viewModelScope.launch(Dispatchers.IO){
-                _weatherData.postValue(apiService.getForecastData(city=city))
-                Log.d("for",apiService.getForecastData(city=city).toString())
+                _weatherData.postValue(apiService.getForecastData(city=city,days=days))
+                Log.d("for",apiService.getForecastData(city=city,days=days).toString())
             }
         }catch (e: Exception){
             Log.d("msg1",e.toString())
         }
-        return "Pranav 123"
-
+        return "123"
     }
 }
