@@ -22,4 +22,5 @@
     <color name="bottomPrimaryDark">#432fbf</color>
     <color name="bottomAccent">#D81B60</color>
     <color name="colorBadge">#f4d415</color>
+    <color name="lightGray">#DDDDDD</color>
 </resources>
